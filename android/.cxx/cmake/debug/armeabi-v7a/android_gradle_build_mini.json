@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "E:\\opencv_binding\\opencv_binding\\android\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "E:\\SDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\opencv_binding\\opencv_binding\\android\\.cxx\\cmake\\debug\\armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "lib_opencv-Debug-armeabi-v7a": {
+      "artifactName": "lib_opencv",
+      "abi": "armeabi-v7a",
+      "output": "E:\\opencv_binding\\opencv_binding\\android\\src\\main\\jniLibs\\armeabi-v7a\\libopencv_java4.so"
+    },
+    "opencv_binding-Debug-armeabi-v7a": {
+      "artifactName": "opencv_binding",
+      "buildCommand": "E:\\SDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\opencv_binding\\opencv_binding\\android\\.cxx\\cmake\\debug\\armeabi-v7a --target opencv_binding",
+      "abi": "armeabi-v7a",
+      "output": "E:\\opencv_binding\\opencv_binding\\example\\build\\opencv_binding\\intermediates\\cmake\\debug\\obj\\armeabi-v7a\\libopencv_binding.so"
+    }
+  }
+}

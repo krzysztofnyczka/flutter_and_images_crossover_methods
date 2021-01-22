@@ -1,0 +1,1 @@
+ninja: error: '../../../../src/main/jniLibs/armeabi-v7a/libopencv_java4.so', needed by 'E:/opencv_binding/opencv_binding/example/build/opencv_binding/intermediates/cmake/debug/obj/armeabi-v7a/libopencv_bindings.so', missing and no known rule to make it

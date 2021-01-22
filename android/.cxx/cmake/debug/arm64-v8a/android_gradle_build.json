@@ -1,0 +1,46 @@
+
+{
+	"buildFiles" : [ "E:/opencv_binding/opencv_binding/android/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"E:\\SDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\opencv_binding\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"lib_opencv-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "lib_opencv",
+			"buildType" : "debug",
+			"output" : "E:/opencv_binding/opencv_binding/android/src/main/jniLibs/arm64-v8a/libopencv_java4.so",
+			"toolchain" : "2699877773"
+		},
+		"opencv_binding-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "opencv_binding",
+			"buildCommand" : "E:\\SDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\opencv_binding\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a --target opencv_binding",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --gcc-toolchain=E:/SDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/SDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dopencv_binding_EXPORTS -I..\\..\\..\\..\\..\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -frtti -fexceptions -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "E:/opencv_binding/opencv_binding/ios/Classes/basic.cpp",
+					"workingDirectory" : "E:/opencv_binding/opencv_binding/android/.cxx/cmake/debug/arm64-v8a"
+				}
+			],
+			"output" : "E:/opencv_binding/opencv_binding/example/build/opencv_binding/intermediates/cmake/debug/obj/arm64-v8a/libopencv_binding.so",
+			"toolchain" : "2699877773"
+		}
+	},
+	"toolchains" : 
+	{
+		"2699877773" : 
+		{
+			"cCompilerExecutable" : "E:/SDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "E:/SDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}

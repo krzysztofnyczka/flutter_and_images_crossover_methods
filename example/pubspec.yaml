@@ -1,0 +1,34 @@
+name: opencv_binding_example
+description: Demonstrates how to use the opencv_binding plugin.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+environment:
+  sdk: ">=2.8.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: ^0.5.8+17
+  tflite: ^1.1.1
+  image: ^2.1.19
+  flutter_bloc: ^6.1.1
+  rxdart: ^0.25.0
+  ffi: ^0.1.3
+
+  opencv_binding:
+    path: ../
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # .mp3 added to the model file, because otherwise it gets compressed in building process
+  # http://ponystyle.com/blog/2010/03/26/dealing-with-asset-compression-in-android-apps/
+  assets:
+    - assets/mobilenet_v1_1.0_224.txt
+    - assets/mobilenet_v1_1.0_224.tflite.mp3
+
