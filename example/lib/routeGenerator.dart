@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:opencv_binding_example/main.dart';
 import 'package:opencv_binding_example/opencv.dart';
 import 'package:opencv_binding_example/opencv2.dart';
+import 'package:opencv_binding_example/opencv_package.dart';
 import 'package:opencv_binding_example/tensorflowForFlutter.dart';
 
 class RouteGenerator {
@@ -33,11 +34,20 @@ class RouteGenerator {
               ));
         }
         return errorRoute(msg: "Wrong arguments");
-      case "/edge":
+      case "/ffi":
         print(args);
         if (args is List<CameraDescription>) {
           return MaterialPageRoute(
               builder: (_) => OpenCv(
+                cameras: args,
+              ));
+        }
+        return errorRoute(msg: "Wrong arguments");
+      case "/opencv":
+        print(args);
+        if (args is List<CameraDescription>) {
+          return MaterialPageRoute(
+              builder: (_) => OpenCvPackage(
                 cameras: args,
               ));
         }

@@ -5,7 +5,11 @@
   },
   {
     "level": "INFO",
-    "message": "rebuilding JSON E:\\opencv_binding\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\\android_gradle_build.json due to:"
+    "message": "rebuilding JSON E:\\praca_inzynierska\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\\android_gradle_build.json due to:"
+  },
+  {
+    "level": "INFO",
+    "message": "- command changed from previous, will remove stale json folder"
   },
   {
     "level": "INFO",
@@ -17,15 +21,19 @@
   },
   {
     "level": "INFO",
-    "message": "keeping json folder \u0027E:\\opencv_binding\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\u0027 but regenerating project"
+    "message": "removing stale contents from \u0027E:\\praca_inzynierska\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\u0027"
   },
   {
     "level": "INFO",
-    "message": "executing cmake Executable : E:\\SDK\\cmake\\3.6.4111459\\bin\\cmake.exe\narguments : \n-HE:\\opencv_binding\\opencv_binding\\android\n-BE:\\opencv_binding\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_PLATFORM\u003dandroid-21\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dE:\\opencv_binding\\opencv_binding\\example\\build\\opencv_binding\\intermediates\\cmake\\debug\\obj\\arm64-v8a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003dE:\\SDK\\ndk\\22.0.7026061\n-DCMAKE_CXX_FLAGS\u003d-frtti -fexceptions -std\u003dc++11\n-DCMAKE_TOOLCHAIN_FILE\u003dE:\\SDK\\ndk\\22.0.7026061\\build\\cmake\\android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003dE:\\SDK\\cmake\\3.6.4111459\\bin\\ninja.exe\n-GAndroid Gradle - Ninja\n-DANDROID_STL\u003dc++_shared\njvmArgs : \n\n"
+    "message": "created folder \u0027E:\\praca_inzynierska\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\u0027"
   },
   {
     "level": "INFO",
-    "message": "Executable : E:\\SDK\\cmake\\3.6.4111459\\bin\\cmake.exe\narguments : \n-HE:\\opencv_binding\\opencv_binding\\android\n-BE:\\opencv_binding\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_PLATFORM\u003dandroid-21\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dE:\\opencv_binding\\opencv_binding\\example\\build\\opencv_binding\\intermediates\\cmake\\debug\\obj\\arm64-v8a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003dE:\\SDK\\ndk\\22.0.7026061\n-DCMAKE_CXX_FLAGS\u003d-frtti -fexceptions -std\u003dc++11\n-DCMAKE_TOOLCHAIN_FILE\u003dE:\\SDK\\ndk\\22.0.7026061\\build\\cmake\\android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003dE:\\SDK\\cmake\\3.6.4111459\\bin\\ninja.exe\n-GAndroid Gradle - Ninja\n-DANDROID_STL\u003dc++_shared\njvmArgs : \n\n"
+    "message": "executing cmake Executable : E:\\SDK\\cmake\\3.6.4111459\\bin\\cmake.exe\narguments : \n-HE:\\praca_inzynierska\\opencv_binding\\android\n-BE:\\praca_inzynierska\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_PLATFORM\u003dandroid-21\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dE:\\praca_inzynierska\\opencv_binding\\example\\build\\opencv_binding\\intermediates\\cmake\\debug\\obj\\arm64-v8a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003dE:\\SDK\\ndk\\22.0.7026061\n-DCMAKE_CXX_FLAGS\u003d-frtti -fexceptions -std\u003dc++11\n-DCMAKE_TOOLCHAIN_FILE\u003dE:\\SDK\\ndk\\22.0.7026061\\build\\cmake\\android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003dE:\\SDK\\cmake\\3.6.4111459\\bin\\ninja.exe\n-GAndroid Gradle - Ninja\n-DANDROID_STL\u003dc++_shared\njvmArgs : \n\n"
+  },
+  {
+    "level": "INFO",
+    "message": "Executable : E:\\SDK\\cmake\\3.6.4111459\\bin\\cmake.exe\narguments : \n-HE:\\praca_inzynierska\\opencv_binding\\android\n-BE:\\praca_inzynierska\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_PLATFORM\u003dandroid-21\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dE:\\praca_inzynierska\\opencv_binding\\example\\build\\opencv_binding\\intermediates\\cmake\\debug\\obj\\arm64-v8a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003dE:\\SDK\\ndk\\22.0.7026061\n-DCMAKE_CXX_FLAGS\u003d-frtti -fexceptions -std\u003dc++11\n-DCMAKE_TOOLCHAIN_FILE\u003dE:\\SDK\\ndk\\22.0.7026061\\build\\cmake\\android.toolchain.cmake\n-DCMAKE_MAKE_PROGRAM\u003dE:\\SDK\\cmake\\3.6.4111459\\bin\\ninja.exe\n-GAndroid Gradle - Ninja\n-DANDROID_STL\u003dc++_shared\njvmArgs : \n\n"
   },
   {
     "level": "INFO",
@@ -33,15 +41,15 @@
   },
   {
     "level": "INFO",
-    "message": "write build output E:\\opencv_binding\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\\build_output.txt"
+    "message": "write build output E:\\praca_inzynierska\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\\build_output.txt"
   },
   {
     "level": "INFO",
-    "message": "deleted unexpected build output E:\\opencv_binding\\opencv_binding\\example\\build\\opencv_binding\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libc++_shared.so in incremental regenerate"
+    "message": "deleted unexpected build output E:\\praca_inzynierska\\opencv_binding\\example\\build\\opencv_binding\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libc++_shared.so in incremental regenerate"
   },
   {
     "level": "INFO",
-    "message": "write command file E:\\opencv_binding\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\\build_command.txt"
+    "message": "write command file E:\\praca_inzynierska\\opencv_binding\\android\\.cxx\\cmake\\debug\\arm64-v8a\\build_command.txt"
   },
   {
     "level": "INFO",

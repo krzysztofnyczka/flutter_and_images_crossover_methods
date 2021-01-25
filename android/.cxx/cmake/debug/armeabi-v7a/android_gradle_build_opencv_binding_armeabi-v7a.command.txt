@@ -1,7 +1,7 @@
 Executable : E:\SDK\cmake\3.6.4111459\bin\cmake.exe
 arguments : 
 --build
-E:\opencv_binding\opencv_binding\android\.cxx\cmake\debug\armeabi-v7a
+E:\praca_inzynierska\opencv_binding\android\.cxx\cmake\debug\armeabi-v7a
 --target
 opencv_binding
 jvmArgs : 

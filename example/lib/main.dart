@@ -73,9 +73,16 @@ class _StartPageState extends State<StartPage> {
             RaisedButton(
               onPressed: () {
                 Navigator.of(context)
-                    .pushNamed("/edge", arguments: widget.cameras);
+                    .pushNamed("/ffi", arguments: widget.cameras);
               },
               child: Text("C++ code run via dart:ffi in OpenCV"),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .pushNamed("/opencv", arguments: widget.cameras);
+              },
+              child: Text("opencv_flutter package"),
             )
           ],
         ),
