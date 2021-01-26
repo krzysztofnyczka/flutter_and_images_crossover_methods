@@ -48,9 +48,11 @@ class ProcessFrameFrom3PlanesArguments {
 
 class ProcessFrameFrom3PlanesResult {
   Uint8List image;
+  int width;
+  int height;
   int computationInMiliseconds;
 
-  ProcessFrameFrom3PlanesResult(this.image, [this.computationInMiliseconds = 0]);
+  ProcessFrameFrom3PlanesResult(this.image, this.width, this.height, [this.computationInMiliseconds = 0]);
 }
 
 class ProcessFrameResult {
@@ -113,7 +115,7 @@ class FrameProcessing {
     free(p0);
     free(p1);
     free(p2);
-    return ProcessFrameFrom3PlanesResult(resultImage);
+    return ProcessFrameFrom3PlanesResult(resultImage, width, height);
   }
 
   static DynamicLibrary _getDynamicLibrary() {

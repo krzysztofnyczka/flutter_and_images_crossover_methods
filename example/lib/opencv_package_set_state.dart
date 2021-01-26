@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:math';
 import 'dart:typed_data';
 
 import 'package:camera/camera.dart';
@@ -9,102 +8,98 @@ import 'package:flutter/scheduler.dart';
 import 'package:image/image.dart' as img_package;
 import 'package:opencv/opencv.dart';
 
-class OpenCvPackage extends StatefulWidget {
+class OpenCvPackage2 extends StatefulWidget {
   final List<CameraDescription> cameras;
 
-  const OpenCvPackage({Key key, this.cameras}) : super(key: key);
+  const OpenCvPackage2({Key key, this.cameras}) : super(key: key);
 
   @override
-  _OpenCvPackageState createState() => _OpenCvPackageState();
+  _OpenCvPackage2State createState() => _OpenCvPackage2State();
 }
 
-class _OpenCvPackageState extends State<OpenCvPackage> {
+class _OpenCvPackage2State extends State<OpenCvPackage2> {
   CameraController controller;
-  OpenCvPackageManager openCvPackageManager;
+  OpenCvPackageResult outputImage;
 
   @override
   void initState() {
     super.initState();
-    openCvPackageManager = OpenCvPackageManager();
+    bool computing = false;
     controller = new CameraController(
       widget.cameras[0],
       ResolutionPreset.medium,
     );
     controller.initialize().then((value) {
-      openCvPackageManager.startStreamingComputedOutput(controller);
+      Stopwatch stopwatch = Stopwatch()..start();
+      controller.startImageStream((image) async {
+        if (!mounted) {
+          return;
+        }
+        if (!computing) {
+          computing = true;
+          await runComputations(image).then((value) {
+            value.computationInMiliseconds = stopwatch.elapsed.inMilliseconds;
+            if (mounted) {
+              setState(() {
+                outputImage = value;
+              });
+              SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+                computing = false;
+              });
+
+            }
+          });
+          stopwatch.reset();
+        }
+      });
     });
+  }
+
+  Future<OpenCvPackageResult> runComputations(CameraImage img) async {
+    Uint8List jpg = await convertImagetoUint8List(img);
+    // moving this computation to another thread slows down the application to ~1000ms
+    // Uint8List jpg = await compute(convertImagetoUint8List,img);
+    Uint8List openCvResult = await ImgProc.laplacian(jpg, 5);
+    return OpenCvPackageResult(openCvResult);
   }
 
   @override
   void dispose() {
     controller?.dispose();
-    openCvPackageManager.close();
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        title: Text("opencv_flutter package"),
-      ),
-      body: FutureBuilder<bool>(
-        future: openCvPackageManager.isControllerPrepared,
-        builder: (context, snapshot) {
-          print(snapshot);
-          if (!snapshot.hasData) {
-            return Center(
-              child: Text("Preparing camera!"),
-            );
-          } else {
-            return StreamBuilder<OpenCvPackageResult>(
-                stream: openCvPackageManager.computedOutput.stream,
-                builder: (context, snapshot) {
-                  bool isThereData = snapshot.data != null;
-                  if (snapshot.data != null) {
-                    // WidgetsBinding.instance.scheduleFrameCallback((timeStamp) {
-                    //   SchedulerBinding.instance.scheduleFrameCallback((_) {
-                    //     openCvPackageManager.computing = false;
-                      // });
-                    // });
-                    // Future.delayed(const Duration(milliseconds: 60), () {
-                    //   openCvPackageManager.computing = false;
-                    // });
-                  }
-                  return Stack(
-                    children: [
-                      CameraPreview(controller),
-                      isThereData
-                          ? Positioned(
-                              top: 0,
-                              left: 0,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Text(
-                                      "Computation took: ${snapshot.data.computationInMiliseconds} ms"),
-                                   RepaintBoundary(
-                                     child: RotatedBox(
-                                          quarterTurns: 1,
-                                          child: Image.memory(
-                                            snapshot.data.image,
-                                            gaplessPlayback: true,
-                                            width: min(size.width/2, snapshot.data.width.toDouble()),
-                                          )),
-                                   ),
-                                ],
-                              ),
-                            )
-                          : Container(),
-                    ],
-                  );
-                });
-          }
-        },
-      ),
-    );
+        appBar: AppBar(
+          title: Text("opencv_flutter package"),
+        ),
+        body: Stack(
+          children: [
+            CameraPreview(controller),
+            outputImage != null
+                ? Positioned(
+                    top: 0,
+                    left: 0,
+                    child: Column(
+                      children: [
+                        Text(
+                            "Computation took: ${outputImage.computationInMiliseconds} ms"),
+                        RotatedBox(
+                            quarterTurns: 1,
+                            child: Image.memory(
+                              outputImage.image,
+                              height:
+                                  MediaQuery.of(context).size.height * 1 / 4,
+                              width: MediaQuery.of(context).size.width * 1 / 4,
+                            )),
+                      ],
+                    ),
+                  )
+                : Container(),
+          ],
+        ));
   }
 }
 
@@ -133,7 +128,6 @@ class OpenCvPackageManager {
           if (mounted) {
             computedOutput.sink.add(value);
           }
-          computing = false;
         });
         stopwatch.reset();
       }
@@ -145,17 +139,15 @@ class OpenCvPackageManager {
     // moving this computation to another thread slows down the application to ~1000ms
     // Uint8List jpg = await compute(convertImagetoUint8List,img);
     Uint8List openCvResult = await ImgProc.laplacian(jpg, 5);
-    return OpenCvPackageResult(openCvResult, img.width, img.height);
+    return OpenCvPackageResult(openCvResult);
   }
 }
 
 class OpenCvPackageResult {
   Uint8List image;
-  int width;
-  int height;
   int computationInMiliseconds;
 
-  OpenCvPackageResult(this.image, this.width, this.height, [this.computationInMiliseconds = 0]);
+  OpenCvPackageResult(this.image, [this.computationInMiliseconds = 0]);
 }
 
 // top level function for computing in another thread

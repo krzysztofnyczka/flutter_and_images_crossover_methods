@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:ffi';
+import 'dart:math';
 import 'dart:typed_data';
 
 import 'package:camera/camera.dart';
@@ -22,9 +23,6 @@ class _OpenCvState extends State<OpenCv> {
   CameraController controller;
   OpenCvManager openCvManager;
   Pointer<Uint32> outputImage;
-  Image encodedImage;
-  Image encodedImage1;
-  int imageBufferNumber;
 
   @override
   void initState() {
@@ -35,7 +33,8 @@ class _OpenCvState extends State<OpenCv> {
       ResolutionPreset.medium,
     );
     controller.initialize().then((value) {
-      print("PREVIEW SIZE: ${controller.value.previewSize.width.toInt()} and ${controller.value.previewSize.height}");
+      print(
+          "PREVIEW SIZE: ${controller.value.previewSize.width.toInt()} and ${controller.value.previewSize.height}");
       outputImage = allocate<Uint32>(
           count: controller.value.previewSize.width.toInt() *
               controller.value.previewSize.height.toInt());
@@ -53,6 +52,7 @@ class _OpenCvState extends State<OpenCv> {
 
   @override
   Widget build(BuildContext context) {
+    double totalWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: Text("C++ code run via dart:ffi in OpenCV"),
@@ -69,45 +69,32 @@ class _OpenCvState extends State<OpenCv> {
             return StreamBuilder<ProcessFrameFrom3PlanesResult>(
                 stream: openCvManager.computedOutput.stream,
                 builder: (context, snapshot) {
-                  bool isThereData = imageBufferNumber != null;
-                  if (snapshot.data != null) {
-                    if (imageBufferNumber == 1) {
-                      encodedImage = Image.memory(
-                        snapshot.data.image,
-                        // height: MediaQuery.of(context).size.height * 1 / 4,
-                        // width: MediaQuery.of(context).size.width * 1 / 4,
-                      );
-                      imageBufferNumber = 0;
-                    } else {
-                      encodedImage1 = Image.memory(
-                        snapshot.data.image,
-                      );
-                      imageBufferNumber = 1;
-                    }
-                      SchedulerBinding.instance.scheduleFrameCallback((_) {
-                        openCvManager.computing = false;
-                      });
+                  bool isThereData = snapshot.data != null;
+                  if (isThereData) {
+                    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+                      openCvManager.computing = false;
+                    });
                   }
                   return isThereData
                       ? Stack(
                           children: [
                             CameraPreview(controller),
-                            imageBufferNumber == 0 ? encodedImage : encodedImage1,
                             Positioned(
                               top: 0,
                               left: 0,
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
                                       "Computation took: ${snapshot.data.computationInMiliseconds} ms"),
-                                  // SizedBox(
-                                  //   child: encodedImage,
-                                  //   width:
-                                  //       MediaQuery.of(context).size.width * 1 / 4,
-                                  //   height: MediaQuery.of(context).size.height *
-                                  //       1 /
-                                  //       4,
-                                  // ),
+                                  RepaintBoundary(
+                                    child: Image.memory(
+                                      snapshot.data.image,
+                                      gaplessPlayback: true,
+                                      width: min(totalWidth / 2,
+                                          snapshot.data.width.toDouble()),
+                                    ),
+                                  ),
                                 ],
                               ),
                             )
@@ -153,10 +140,8 @@ class OpenCvManager {
           value.computationInMiliseconds = stopwatch.elapsed.inMilliseconds;
           if (mounted) {
             computedOutput.sink.add(value);
-            computedOutput.sink.add(value);
-            computedOutput.sink.add(value);
           }
-          //computing = false;
+          // computing = false;
         });
         stopwatch.reset();
       }
