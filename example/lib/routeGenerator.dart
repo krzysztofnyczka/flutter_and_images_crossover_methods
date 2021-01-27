@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:opencv_binding_example/main.dart';
 import 'package:opencv_binding_example/opencvNativeView.dart';
 import 'package:opencv_binding_example/opencvPackageView.dart';
-import 'package:opencv_binding_example/tensorflowForFlutter.dart';
+import 'package:opencv_binding_example/tensorflowForFlutterView.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
