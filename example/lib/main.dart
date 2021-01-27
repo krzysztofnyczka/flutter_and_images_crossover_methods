@@ -11,7 +11,7 @@ void main() async {
   } on CameraException catch (e) {
     print('Error: $e.code\nError Message: $e.message');
   }
-  print("CAMERAS: $cameras");
+  // print("CAMERAS: $cameras");
   runApp(MainApp(cameras: cameras));
 }
 
@@ -83,7 +83,7 @@ class _StartPageState extends State<StartPage> {
                 Navigator.of(context)
                     .pushNamed("/opencv", arguments: widget.cameras);
               },
-              child: Text("opencv_flutter package"),
+              child: Text("Opencv_flutter package"),
             )
           ],
         ),

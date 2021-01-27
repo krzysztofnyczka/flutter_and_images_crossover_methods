@@ -1,3 +1,5 @@
 # ninja log v5
 0	2315	0	CMakeFiles/opencv_binding.dir/E_/praca_inzynierska/opencv_binding/ios/Classes/basic.cpp.o	c1c49ab1d034931c
 2319	2596	0	E:/praca_inzynierska/opencv_binding/example/build/opencv_binding/intermediates/cmake/debug/obj/x86_64/libopencv_binding.so	b4a00cc33d79d1c8
+3	2251	0	CMakeFiles/opencv_binding.dir/E_/praca_inzynierska/opencv_binding/ios/Classes/basic.cpp.o	c1c49ab1d034931c
+2252	2853	0	E:/praca_inzynierska/opencv_binding/example/build/opencv_binding/intermediates/cmake/debug/obj/x86_64/libopencv_binding.so	b4a00cc33d79d1c8

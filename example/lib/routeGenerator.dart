@@ -2,9 +2,8 @@ import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:opencv_binding_example/main.dart';
-import 'package:opencv_binding_example/opencv.dart';
-import 'package:opencv_binding_example/opencv2.dart';
-import 'package:opencv_binding_example/opencv_package.dart';
+import 'package:opencv_binding_example/opencvNativeView.dart';
+import 'package:opencv_binding_example/opencvPackageView.dart';
 import 'package:opencv_binding_example/tensorflowForFlutter.dart';
 
 class RouteGenerator {
@@ -38,7 +37,7 @@ class RouteGenerator {
         print(args);
         if (args is List<CameraDescription>) {
           return MaterialPageRoute(
-              builder: (_) => OpenCv(
+              builder: (_) => OpenCvNative(
                 cameras: args,
               ));
         }

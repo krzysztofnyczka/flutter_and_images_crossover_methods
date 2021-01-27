@@ -51,17 +51,16 @@ class _TensorflowForFlutterState extends State<TensorflowForFlutter> {
           return StreamBuilder<List<String>>(
               stream: tfliteManager.recognitions.stream,
               builder: (context, snapshot) {
-                var outputRecognitions = snapshot;
-                // print("outputRecognitions: ${outputRecognitions.data}");
+                var outputRecognitions = snapshot.data;
                 return Stack(
                   children: [
                     CameraPreview(controller),
-                    outputRecognitions.data != null
+                    outputRecognitions != null
                         ? Positioned(
                             top: 0,
                             left: 0,
                             child: Column(
-                              children: outputRecognitions.data
+                              children: outputRecognitions
                                   .map((e) => Container(
                                         padding: EdgeInsets.all(10),
                                         color: Colors.red,
@@ -141,7 +140,6 @@ class TfliteManager {
         .map((e) =>
             e["confidence"].toString().substring(0, 4) + " " + e["label"])
         .toList();
-    // print("IN HERE outputRecognitions: $outputRecognitions");
     return outputRecognitions;
   }
 }

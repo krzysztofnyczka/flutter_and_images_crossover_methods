@@ -1,3 +1,5 @@
 # ninja log v5
 1	6342	0	CMakeFiles/opencv_binding.dir/E_/praca_inzynierska/opencv_binding/ios/Classes/basic.cpp.o	b14406a740f47d1d
 6346	6669	0	E:/praca_inzynierska/opencv_binding/example/build/opencv_binding/intermediates/cmake/debug/obj/armeabi-v7a/libopencv_binding.so	dfcee3f0cc7bfde4
+166	12600	0	CMakeFiles/opencv_binding.dir/E_/praca_inzynierska/opencv_binding/ios/Classes/basic.cpp.o	b14406a740f47d1d
+12601	14292	0	E:/praca_inzynierska/opencv_binding/example/build/opencv_binding/intermediates/cmake/debug/obj/armeabi-v7a/libopencv_binding.so	dfcee3f0cc7bfde4
