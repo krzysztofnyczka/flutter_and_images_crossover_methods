@@ -135,7 +135,7 @@ CMAKE_OBJCOPY:FILEPATH=E:/SDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-
 CMAKE_OBJDUMP:FILEPATH=E:/SDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/bin/i686-linux-android-objdump.exe
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=praca_inzynierska
 
 //Ranlib
 CMAKE_RANLIB:FILEPATH=E:/SDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe
@@ -180,8 +180,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Strip
 CMAKE_STRIP:FILEPATH=E:/SDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-strip.exe
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=E:/SDK/ndk/22.0.7026061/build/cmake/android.toolchain.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=E:\SDK\ndk\22.0.7026061\build\cmake\android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -200,6 +200,12 @@ log-lib:FILEPATH=E:/SDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64
 
 //Dependencies for the target
 opencv_binding_LIB_DEPENDS:STATIC=general;lib_opencv;general;E:/SDK/ndk/22.0.7026061/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/i686-linux-android/21/liblog.so;
+
+//Value Computed by CMake
+praca_inzynierska_BINARY_DIR:STATIC=E:/praca_inzynierska/opencv_binding/android/.cxx/cmake/debug/x86
+
+//Value Computed by CMake
+praca_inzynierska_SOURCE_DIR:STATIC=E:/praca_inzynierska/opencv_binding/android
 
 
 ########################

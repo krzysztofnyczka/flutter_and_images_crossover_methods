@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'dart:isolate';
 
 import 'package:camera/camera.dart';
+import 'package:ffi/ffi.dart';
 import 'package:opencv_binding/opencvBinding.dart';
 
 class OpenCvManager {
@@ -10,10 +11,18 @@ class OpenCvManager {
   Future<bool> isControllerPrepared = Future<bool>.value(false);
   bool mounted = true;
   bool computing = false;
+  Pointer<Uint32> outputImage;
+
+  void allocatePointer(double width, double height){
+    outputImage = allocate<Uint32>(
+        count: width.toInt() *
+            height.toInt());
+  }
 
   void close() {
     mounted = false;
     computedOutput.close();
+    free(outputImage);
   }
 
   void startStreamingComputedOutput(

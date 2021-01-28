@@ -20,7 +20,6 @@ class OpenCvNative extends StatefulWidget {
 class _OpenCvNativeState extends State<OpenCvNative> {
   CameraController controller;
   OpenCvManager openCvManager;
-  Pointer<Uint32> outputImage;
 
   @override
   void initState() {
@@ -31,10 +30,8 @@ class _OpenCvNativeState extends State<OpenCvNative> {
       ResolutionPreset.medium,
     );
     controller.initialize().then((value) {
-      outputImage = allocate<Uint32>(
-          count: controller.value.previewSize.width.toInt() *
-              controller.value.previewSize.height.toInt());
-      openCvManager.startStreamingComputedOutput(controller, outputImage);
+      openCvManager.allocatePointer(controller.value.previewSize.width, controller.value.previewSize.height);
+      openCvManager.startStreamingComputedOutput(controller, openCvManager.outputImage);
     });
   }
 
@@ -43,7 +40,6 @@ class _OpenCvNativeState extends State<OpenCvNative> {
     controller?.dispose();
     openCvManager.close();
     super.dispose();
-    free(outputImage);
   }
 
   @override
