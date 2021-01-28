@@ -5,9 +5,9 @@ import 'dart:typed_data';
 import 'package:ffi/ffi.dart';
 import 'package:image/image.dart' as img_package;
 
-typedef convert_func = Int32 Function(Pointer<Uint8>, Pointer<Uint8>,
+typedef processFrameFunctionC = Int32 Function(Pointer<Uint8>, Pointer<Uint8>,
     Pointer<Uint8>, Int32, Int32, Int32, Int32, Pointer<Uint32>);
-typedef Convert = int Function(Pointer<Uint8>, Pointer<Uint8>, Pointer<Uint8>,
+typedef processFrameFunctionDart = int Function(Pointer<Uint8>, Pointer<Uint8>, Pointer<Uint8>,
     int, int, int, int, Pointer<Uint32>);
 
 class ProcessFrameArguments {
@@ -48,8 +48,8 @@ class FrameProcessing {
     DynamicLibrary dynamicLibrary = _getDynamicLibrary();
 
     final processFrameFrom3Planes = dynamicLibrary
-        .lookup<NativeFunction<convert_func>>("convert_image")
-        .asFunction<Convert>();
+        .lookup<NativeFunction<processFrameFunctionC>>("convert_image")
+        .asFunction<processFrameFunctionDart>();
 
     Pointer<Uint8> p0 = Uint8ArrayUtils.toPointer(p0b);
     Pointer<Uint8> p1 = Uint8ArrayUtils.toPointer(p1b);
