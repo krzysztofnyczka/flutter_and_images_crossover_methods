@@ -1,0 +1,105 @@
+[1/2] Building CXX object CMakeFiles/opencv_binding.dir/E_/praca_inzynierska/opencv_binding/ios/Classes/basic.cpp.o
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:2: warning: null character ignored [-Wnull-character]
+}<U+0000>
+ ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:3: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000>
+         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:4: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000>
+                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:5: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000>
+                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:6: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000>
+                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:7: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:8: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:9: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:10: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:11: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:12: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:13: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:14: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:15: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:16: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:17: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:18: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:19: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:20: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:21: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:22: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:23: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:24: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:25: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:26: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:27: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:28: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:29: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:30: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:31: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:32: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:33: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                                                                                         ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:34: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                                                                                                 ^
+E:\praca_inzynierska\opencv_binding\ios\Classes\basic.cpp:68:35: warning: null character ignored [-Wnull-character]
+}<U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000><U+0000>
+                                                                                                                                                                                                                                                                         ^
+34 warnings generated.
+[2/2] Linking CXX shared library E:\praca_inzynierska\opencv_binding\example\build\opencv_binding\intermediates\cmake\profile\obj\armeabi-v7a\libopencv_binding.so

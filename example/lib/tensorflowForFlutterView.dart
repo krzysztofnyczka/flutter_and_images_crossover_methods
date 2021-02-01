@@ -60,8 +60,10 @@ class _TensorflowForFlutterState extends State<TensorflowForFlutter> {
                             child: Column(
                               children: outputRecognitions
                                   .map((e) => Container(
+                                        constraints: BoxConstraints(
+                                            minWidth: 180, minHeight: 30),
                                         padding: EdgeInsets.all(10),
-                                        color: Colors.red,
+                                        color: Colors.black,
                                         child: Text(
                                           e,
                                           style: TextStyle(

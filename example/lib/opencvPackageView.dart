@@ -66,19 +66,22 @@ class _OpenCvPackageState extends State<OpenCvPackage> {
                               top: 0,
                               left: 0,
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                       "Computation took: ${snapshot.data.computationInMiliseconds} ms"),
-                                  RepaintBoundary(
-                                    child: RotatedBox(
-                                        quarterTurns: 1,
-                                        child: Image.memory(
-                                          snapshot.data.image,
-                                          gaplessPlayback: true,
-                                          width: min(size.width / 2,
-                                              snapshot.data.width.toDouble()),
-                                        )),
+                                  Container(
+                                    padding: EdgeInsets.only(left: 5),
+                                    child: RepaintBoundary(
+                                      child: RotatedBox(
+                                          quarterTurns: 1,
+                                          child: Image.memory(
+                                            snapshot.data.image,
+                                            gaplessPlayback: true,
+                                            width: min(size.width / 2,
+                                                snapshot.data.width.toDouble()),
+                                          )),
+                                    ),
                                   ),
                                 ],
                               ),

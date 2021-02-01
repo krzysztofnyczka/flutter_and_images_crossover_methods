@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "E:\\praca_inzynierska\\opencv_binding\\android\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "E:\\SDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\praca_inzynierska\\opencv_binding\\android\\.cxx\\cmake\\profile\\x86 --target clean"
+  ],
+  "libraries": {
+    "opencv_binding-Debug-x86": {
+      "artifactName": "opencv_binding",
+      "buildCommand": "E:\\SDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\praca_inzynierska\\opencv_binding\\android\\.cxx\\cmake\\profile\\x86 --target opencv_binding",
+      "abi": "x86",
+      "output": "E:\\praca_inzynierska\\opencv_binding\\example\\build\\opencv_binding\\intermediates\\cmake\\profile\\obj\\x86\\libopencv_binding.so"
+    },
+    "lib_opencv-Debug-x86": {
+      "artifactName": "lib_opencv",
+      "abi": "x86",
+      "output": "E:\\praca_inzynierska\\opencv_binding\\android\\src\\main\\jniLibs\\x86\\libopencv_java4.so"
+    }
+  }
+}

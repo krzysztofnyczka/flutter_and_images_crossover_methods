@@ -25,7 +25,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Praca inzynierska',
+      title: 'Bachelor thesis',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -52,38 +52,51 @@ class _StartPageState extends State<StartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Praca inżynierska"),
+        title: Text('Bachelor thesis'),
       ),
       body: Center(
         child: Column(
           children: [
-            RaisedButton(
-              onPressed: () {
-                Navigator.of(context)
-                    .pushNamed("/cameraApp", arguments: widget.cameras);
-              },
-              child: Text("Camera"),
+            Container(
+              width: MediaQuery.of(context).size.width * 1 / 2,
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed("/cameraApp", arguments: widget.cameras);
+                },
+                child: Center(child: Text("Camera",textAlign: TextAlign.center,)),
+              ),
             ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.of(context)
-                    .pushNamed("/tflite", arguments: widget.cameras);
-              },
-              child: Text("Tensorflow for Flutter"),
+            Container(
+              width: MediaQuery.of(context).size.width * 1 / 2,
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed("/tflite", arguments: widget.cameras);
+                },
+                child: Center(child: Text("Tensorflow for Flutter",textAlign: TextAlign.center,)),
+              ),
             ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.of(context)
-                    .pushNamed("/ffi", arguments: widget.cameras);
-              },
-              child: Text("C++ code run via dart:ffi in OpenCV"),
+            Container(
+              width: MediaQuery.of(context).size.width * 1 / 2,
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed("/ffi", arguments: widget.cameras);
+                },
+                child:
+                    Center(child: Text("C++ code run via dart:ffi in OpenCV",textAlign: TextAlign.center,)),
+              ),
             ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.of(context)
-                    .pushNamed("/opencv", arguments: widget.cameras);
-              },
-              child: Text("Opencv_flutter package"),
+            Container(
+              width: MediaQuery.of(context).size.width * 1 / 2,
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed("/opencv", arguments: widget.cameras);
+                },
+                child: Center(child: Text("Opencv_flutter package",textAlign: TextAlign.center,)),
+              ),
             )
           ],
         ),
